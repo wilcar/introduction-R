@@ -1,7 +1,7 @@
 Installation de R et Rstudio
 ================
-w cariou ufr HHAUuniversité de Nantes
-6 avril 2018
+Wilfrid Cariou.
+11 avril 2020
 
 # Installation
 
