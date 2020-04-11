@@ -1,0 +1,59 @@
+---
+title: "Installation de R et Rstudio "
+author: "Wilfrid Cariou."
+date: "11 avril 2020"
+output: github_document
+---
+
+# Installation 
+
+## R et R studio
+
+Le langage R possède une interface (*GUI*) limitée qui n'a plus vocation à être directement utilisée. Vous devez également utiliser l'environnement de développement R Studio qui assure le rôle d’interface entre R et l’utilisateur.
+
+`r emo::ji("warning")` Vous devez d'abord installer R avant d’installer R Studio.
+
+
+### Installer R (Windows et MacOsX)
+
+Pour une installation sous Windows ou OSX, vous devez vous rendre sur la page **Page d'accueil** du [projet R](https://www.r-project.org/)  puis sélectionnez **Download Cran** suivi de **0-Cloud**. Vous devez télécharger la **distribution binaire précompilée** (*Precompiled binary distributions of the base system and contributed packages*) correspondant à votre système d'exploitation. Une fois le programme d’installation lancé, acceptez l'ensemble des options par défaut offertes par l’installateur. 
+
+```{r out.width = "100%", echo=FALSE, fig.cap="Page d'accueil du [projet R](https://www.r-project.org/), avril 2020.", fig.align='center'}
+knitr::include_graphics(rep("images/landing-r.png"))
+```
+```{r out.width = "100%", echo=FALSE, fig.cap="Page de téléchargement de R, avril 2020.", fig.align='center'}
+knitr::include_graphics(rep("images/tele-r.png"))
+```
+
+
+#### Linux
+
+Si vous travaillez sous Linux, vous trouverez R *via* Gestionnaire (ou bibliothèque) de logiciels .
+
+### Installer RStudio
+
+1. Une fois R correctement installé, rendez-vous sur http://www.rstudio.com/products/rstudio/download/ pour télécharger la l’édition Open Source de RStudio Desktop gratuite.
+2. Choisissez l’installateur correspondant à votre système d’exploitation.
+ 
+```{r out.width = "100%", echo=FALSE, fig.cap="Page de télchargement de RStudio (1), avril 2020.", fig.align='center'}
+knitr::include_graphics(rep("images/tele-rstudio.png"))
+```
+```{r out.width = "100%", echo=FALSE, fig.cap="Page de télchargement de RStudio (2), avril 2020.", fig.align='center'}
+knitr::include_graphics(rep("images/tele-rstudio2.png"))
+```
+
+
+
+### Installer et mettre à jour des bibliothèques (*packages*). 
+
+R fait appel à de nombreux *packages* qui viennent se greffer sur son noyau (R-Base). Les *packages* sont téléchargés depuis le site du CRAN par le biais de la fonction `install.packages()` ou le panneau dédié de R Studio.
+
+```{r out.width = "40%", echo=FALSE, fig.cap="Panneau packages dans RStudio.", fig.align='center'}
+knitr::include_graphics(rep("images/packages1.png"))
+```
+
+`r emo::ji("warning")` Il est important de distinguer l'installation des *packages* et leur utilisation à travers la fonction `library()`. l'installation télécharge les *packages* sur internet et les installe localement sur le disque dur de l’ordinateur dans le dossier `R` (Cette opération n'est à réaliser qu'une seule fois). la fonction `library()` permet de faire appel aux fonctions du *package*. Elle doit être appelée à chaque fois que cela est nécessaire.  
+
+`r emo::ji("warning")` Lors d'une nouvelle installation de R, vous serez amené à télécharger un grand nombre de packages. 
+
+
